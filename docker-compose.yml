@@ -35,8 +35,6 @@ services:
     build: ./
     expose:
       - 80
-    links:
-      - dbpostgresql-db
     environment:
       VIRTUAL_HOST: 'api.montecino.tech'
       VIRTUAL_PORT: 80  
