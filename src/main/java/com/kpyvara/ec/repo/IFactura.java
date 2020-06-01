@@ -7,5 +7,5 @@ import com.kpyvara.ec.model.Factura;
 
 @Repository
 public interface IFactura extends JpaRepository<Factura, Integer> {
-
+	
 }

@@ -24,6 +24,12 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 		return repo.findAll();
 	}
 
+ 
+	public byte[] getOneByte(String id) {
+		Integer axu = Integer.valueOf(id); 
+		return repo.getOne(axu).getDocumento();
+	}
+
 	@Override
 	public Factura getOneEmpresa(String id) {
 		// TODO Auto-generated method stub
