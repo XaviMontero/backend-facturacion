@@ -52,6 +52,8 @@ services:
       POSTGRES_PASSWORD: XaviNoob2016
       POSTGRES_USER: postgres
       POSTGRES_DB: facturacion-api
+    volumes:
+      - ./postgres-data:/var/lib/postgresql
     networks:
       - dockerwp
     restart: always
