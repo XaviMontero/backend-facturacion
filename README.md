@@ -24,7 +24,8 @@ $ psql -U postgres
 3. Si deseas cambiar ala version de docker 
 
 
-```spring.datasource.url=jdbc:postgresql://dbpostgresql-db/facturacion-api
+```
+spring.datasource.url=jdbc:postgresql://dbpostgresql-db/facturacion-api
 spring.datasource.username=postgres
 spring.datasource.password=XaviNoob2016
 spring.datasource.initialization-mode=always
@@ -40,7 +41,8 @@ server.port = 80
 
 4. Si desea ejecutar local 
 
-```spring.datasource.url=jdbc:postgresql://localhost:5432/kpyvara-db1
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/kpyvara-db1
 spring.datasource.username=postgres
 spring.datasource.password=admin
 spring.datasource.initialization-mode=always
