@@ -20,3 +20,31 @@ $ psql -U postgres
 # \q
 ```
 2. Ejecuta spring boot ya que cuenta con la capa ddl-auto
+
+3. Si deseas cambiar ala version de docker 
+
+	spring.datasource.url=jdbc:postgresql://dbpostgresql-db/facturacion-api
+	spring.datasource.username=postgres
+	spring.datasource.password=XaviNoob2016
+	spring.datasource.initialization-mode=always
+	spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+	spring.jpa.show-sql=true 
+	spring.jpa.hibernate.ddl-auto=update
+	spring.jpa.properties.hibernate.format_sql=true
+	spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+	spring.jackson.default-property-inclusion=non-null
+	server.port = 80
+
+4. Si desea ejecutar local 
+
+	spring.datasource.url=jdbc:postgresql://localhost:5432/kpyvara-db1
+	spring.datasource.username=postgres
+	spring.datasource.password=admin
+	spring.datasource.initialization-mode=always
+	spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+	spring.jpa.show-sql=true 
+	spring.jpa.hibernate.ddl-auto=update
+	spring.jpa.properties.hibernate.format_sql=true
+	spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+	spring.jackson.default-property-inclusion=non-null
+
