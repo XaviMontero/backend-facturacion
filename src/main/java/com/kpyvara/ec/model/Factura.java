@@ -28,6 +28,10 @@ public class Factura {
 	private String identificacion;
 	@Column()
 	private Double subTotal;
+	@Column()
+	private Double subTotaliva;
+	@Column()
+	private Double iva;
 	@Column(name = "total", nullable = false)
 	private Double total;
 	@Column(name = "fecha", nullable = false)

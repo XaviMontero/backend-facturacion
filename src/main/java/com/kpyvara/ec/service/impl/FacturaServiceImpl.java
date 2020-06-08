@@ -52,6 +52,8 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 			 axu.setTotal((Double) obj[5]);
 			 empre.setRuc((String) obj[6]);
 			 empre.setNombre((String) obj[7]);
+			 axu.setIva((Double) obj[8]);
+			 axu.setSubTotaliva((Double) obj[9]);
 			 axu.setEmpresa(empre);
 			 String fecha =  obj[3].toString();
 			 DateTimeFormatter formatter = null;
@@ -76,6 +78,8 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 			 axu.setTotal((Double) obj[5]);
 			 empre.setRuc((String) obj[6]);
 			 empre.setNombre((String) obj[7]);
+			 axu.setIva((Double) obj[8]);
+			 axu.setSubTotaliva((Double) obj[9]);
 			 axu.setEmpresa(empre);
 			 String fecha =  obj[3].toString();
 			 DateTimeFormatter formatter = null;
@@ -106,6 +110,8 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 			 axu.setTotal((Double) obj[5]);
 			 empre.setRuc((String) obj[6]);
 			 empre.setNombre((String) obj[7]);
+			 axu.setIva((Double) obj[8]);
+			 axu.setSubTotaliva((Double) obj[9]);
 			 axu.setEmpresa(empre);
 			 String fecha =  obj[3].toString();
 			 DateTimeFormatter formatter = null;
@@ -137,6 +143,8 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 			 axu.setTotal((Double) obj[5]);
 			 empre.setRuc((String) obj[6]);
 			 empre.setNombre((String) obj[7]);
+			 axu.setIva((Double) obj[8]);
+			 axu.setSubTotaliva((Double) obj[9]);
 			 axu.setEmpresa(empre);
 			 String fecha =  obj[3].toString();
 			 DateTimeFormatter formatter = null;

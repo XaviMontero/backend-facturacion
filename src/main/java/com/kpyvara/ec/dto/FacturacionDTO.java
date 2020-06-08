@@ -19,7 +19,9 @@ public class FacturacionDTO {
 	private Double subTotal;
 
 	private Double total;
-
+	private Double iva;
+	
+	private Double subTotaliva;
 	private LocalDate fecha;
 
 	private String codigo;	
