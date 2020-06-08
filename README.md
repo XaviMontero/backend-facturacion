@@ -23,7 +23,6 @@ $ psql -U postgres
 
 3. Si deseas cambiar ala version de docker 
 
-
 ```
 spring.datasource.url=jdbc:postgresql://dbpostgresql-db/facturacion-api
 spring.datasource.username=postgres
@@ -51,5 +50,38 @@ spring.jpa.show-sql=true
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
-spring.jackson.default-property-inclusion=non-null```
+spring.jackson.default-property-inclusion=non-null
+```
+5. Modelo de retencion 
+
+```
+{
+	"empresa":{
+	 "ruc":"0300937034001"	
+	},
+	"rucProvedor":"0106079783",
+	"valor":15.00,
+	"baseImponible":16.23,
+	"fecha":"2020-06-02",
+	"codigo":"0545646484678786768767687687645161368841646",
+	"documento":"Documento"
+}
+```
+6. Modelo de factura
+
+```
+	{
+	"empresa":{
+	 "ruc":"0300937034001"	
+	},
+	"identificacion":"0106079783",
+	"subTotal":15.00,
+	"total":16.23,
+	"iva":0.12,
+	"subTotaliva":0.95,
+	"fecha":"2020-06-02",
+	"codigo":"0545646484678786768767687687645161368841646",
+	"documento":"Aqui va el pdf en byte "
+	}
+```
 
