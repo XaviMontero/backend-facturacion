@@ -45,7 +45,7 @@ services:
     networks:
       - dockerwp
     restart: always
-  app:
+  apps:
     container_name: api-v2-0.0.2
     image: api-v2-0.0.2
     build: ./
