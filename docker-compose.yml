@@ -45,6 +45,21 @@ services:
     networks:
       - dockerwp
     restart: always
+  app:
+    container_name: api-v2-0.0.2
+    image: api-v2-0.0.2
+    build: ./
+    expose:
+      - 80
+    environment:
+      VIRTUAL_HOST: 'apis.montecino.tech'
+      VIRTUAL_PORT: 80  
+    depends_on:
+      - dbpostgresql-db
+    networks:
+      - dockerwp
+    restart: always
+ 
   dbpostgresql-db:
     container_name: dbpostgresql-db
     image: postgres
