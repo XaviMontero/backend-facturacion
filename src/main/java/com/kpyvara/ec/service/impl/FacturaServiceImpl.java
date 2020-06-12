@@ -138,7 +138,6 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 			 axu.setId((Integer) obj[0]); 
 			 axu.setSubTotal((Double) obj[1]);
 			 axu.setCodigo((String) obj[2]);
-			
 			 axu.setIdentificacion((String) obj[4]);
 			 axu.setTotal((Double) obj[5]);
 			 empre.setRuc((String) obj[6]);

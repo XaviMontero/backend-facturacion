@@ -20,6 +20,6 @@ public interface IFactura extends JpaRepository<Factura, Integer> {
 	@Query(value = " SELECT F.id, F.sub_total, F.codigo, F.fecha, F.identificacion, F.total, A.ruc,A.nombre  ,F.iva ,F.sub_totaliva FROM public.factura F inner join public.empresa A on A.ruc = F.ruc where F.identificacion=?1 and F.fecha BETWEEN ?2 AND ?3", nativeQuery = true)
 	List<Object[]> listarResumenFecha(String cedula, LocalDate fechaIni, LocalDate fechaFin);
 	
-	@Query(value = " SELECT F.id, F.sub_total, F.codigo, F.fecha, F.identificacion, F.total, A.ruc,A.nombre ,F.iva ,F.sub_totaliva FFROM public.factura F inner join public.empresa A on A.ruc = F.ruc where F.identificacion=?1 and A.ruc=?2 and F.fecha BETWEEN ?3 AND ?4", nativeQuery = true)
+	@Query(value = " SELECT F.id, F.sub_total, F.codigo, F.fecha, F.identificacion, F.total, A.ruc,A.nombre ,F.iva ,F.sub_totaliva FROM public.factura F inner join public.empresa A on A.ruc = F.ruc where F.identificacion=?1 and A.ruc=?2 and F.fecha BETWEEN ?3 AND ?4", nativeQuery = true)
 	List<Object[]> listarResumenRucFecha(String cedula , String ruc, LocalDate fechaIni, LocalDate fechaFin );
 }
