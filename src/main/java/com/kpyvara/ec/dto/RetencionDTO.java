@@ -13,11 +13,8 @@ import lombok.Setter;
 public class RetencionDTO {
  
 	private Integer id;
- 
 	private String rucProvedor;
- 
 	private Double valor;
- 
 	private Double baseImponible;
  	private LocalDate fecha;
  	private String codigo;	
