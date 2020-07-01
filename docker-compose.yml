@@ -46,8 +46,8 @@ services:
       - dockerwp
     restart: always
   apps:
-    container_name: api-v2-0.0.2
-    image: api-v2-0.0.2
+    container_name: api-v2-0.0.3
+    image: api-v2-0.0.3
     build: ./
     expose:
       - 80
