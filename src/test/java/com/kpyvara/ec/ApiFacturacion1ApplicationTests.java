@@ -16,18 +16,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ApiFacturacion1ApplicationTests {
-
 	@Autowired
 	private BCryptPasswordEncoder bcrypt;
-
 	@Autowired
 	private IUsuarioRepo repo;
-
 	@Test
 	public void crearUsuario() {
 		Usuario us = new Usuario();
-		us.setIdUsuario(6);
-		us.setUsername("mito1@gmail.com");
+		us.setIdUsuario(7);
+		us.setUsername("mito8@gmail.com");
 		us.setPassword(bcrypt.encode("123"));
 		us.setEnabled(true);
 
