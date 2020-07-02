@@ -1,13 +1,39 @@
 package com.kpyvara.ec;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import com.kpyvara.ec.model.Usuario;
+import com.kpyvara.ec.repo.IUsuarioRepo;
 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
+@RunWith(SpringRunner.class)
 @SpringBootTest
-class ApiFacturacion1ApplicationTests {
-/*
-	@Test*/
-	void contextLoads() {
+public class ApiFacturacion1ApplicationTests {
+
+	@Autowired
+	private BCryptPasswordEncoder bcrypt;
+
+	@Autowired
+	private IUsuarioRepo repo;
+
+	@Test
+	public void crearUsuario() {
+		Usuario us = new Usuario();
+		us.setIdUsuario(6);
+		us.setUsername("mito1@gmail.com");
+		us.setPassword(bcrypt.encode("123"));
+		us.setEnabled(true);
+
+		Usuario retorno = repo.save(us);
+
+		assertTrue(retorno.getPassword().equalsIgnoreCase(us.getPassword()));
 	}
 
 }

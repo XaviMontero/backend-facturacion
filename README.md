@@ -35,6 +35,18 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 spring.jackson.default-property-inclusion=non-null
 server.port = 80
+security.oauth2.resource.filter-order=3
+
+security.signing-key=MaYzkSjmkzPC57L
+security.encoding-strength=256
+security.security-realm=Spring Boot JWT
+
+security.jwt.client-id=mitomediapp
+security.jwt.client-secret=mito89codex
+security.jwt.grant-type=password
+security.jwt.scope-read=read
+security.jwt.scope-write=write
+security.jwt.resource-ids=mitoresourceid
 ```
  
 
@@ -51,6 +63,18 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 spring.jackson.default-property-inclusion=non-null
+security.oauth2.resource.filter-order=3
+
+security.signing-key=MaYzkSjmkzPC57L
+security.encoding-strength=256
+security.security-realm=Spring Boot JWT
+
+security.jwt.client-id=mitomediapp
+security.jwt.client-secret=mito89codex
+security.jwt.grant-type=password
+security.jwt.scope-read=read
+security.jwt.scope-write=write
+security.jwt.resource-ids=mitoresourceid
 ```
 5. Modelo de retencion 
 

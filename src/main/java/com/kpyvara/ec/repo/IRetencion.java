@@ -23,4 +23,7 @@ public interface IRetencion extends JpaRepository<Retencion, Integer> {
 	
 	@Query(value = " SELECT F.id, F.base_imponible, F.codigo, F.fecha, F.ruc_provedor, F.valor, A.ruc,A.nombre  FROM public.retencion F inner join public.empresa A on A.ruc = F.ruc where F.ruc_provedor=?1 and A.ruc=?2 and F.fecha BETWEEN ?3 AND ?4", nativeQuery = true)
 	List<Object[]> listarResumenRucFecha(String cedula , String ruc, LocalDate fechaIni, LocalDate fechaFin );
+
+	@Query(value = " SELECT F.id, F.base_imponible, F.codigo, F.fecha, F.ruc_provedor, F.valor, A.ruc,A.nombre  FROM public.retencion F inner join public.empresa A on A.ruc = F.ruc where A.ruc=?1 and F.fecha BETWEEN ?2 AND ?3", nativeQuery = true)
+	List<Object[]> listarResumenRucContador( String ruc, LocalDate fechaIni, LocalDate fechaFin );
 }
