@@ -18,6 +18,10 @@ public class Empresa {
 	private String ruc;
 	@Column(name = "nombre", nullable = false, length = 50)
 	private String nombre;
+	@Column(name = "nombre_local", length = 50)
+	private String nombreLocal;
+	@Column(name = "direccion", length = 50)
+	private String direccion;
  
 	
 }

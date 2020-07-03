@@ -2,8 +2,10 @@ package com.kpyvara.ec.controller;
 
 import com.kpyvara.ec.dto.FacturacionDTO;
 import com.kpyvara.ec.dto.RetencionDTO;
+import com.kpyvara.ec.model.Empresa;
 import com.kpyvara.ec.service.impl.FacturaServiceImpl;
 import com.kpyvara.ec.service.impl.RetencionServicelImpl;
+import com.kpyvara.ec.service.impl.UsuarioServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,8 @@ public class ContadorController {
     FacturaServiceImpl service;
     @Autowired
     RetencionServicelImpl serviceContador;
+    @Autowired
+    UsuarioServiceImpl serviceUser;
 
     @GetMapping(value="/facturas/{ruc}/{fechaIni}/{fechaFin}")
     public ResponseEntity<List<FacturacionDTO>> getFacturaRucs( @PathVariable("ruc") String ruc , @PathVariable("fechaIni") String fechaIni , @PathVariable("fechaFin") String fechaFin) {
@@ -32,6 +36,12 @@ public class ContadorController {
     public ResponseEntity<List<RetencionDTO>> getRetencionRucs( @PathVariable("ruc") String ruc , @PathVariable("fechaIni") String fechaIni , @PathVariable("fechaFin") String fechaFin) {
         List<RetencionDTO> retenciones = serviceContador.getEmpresasRucContador( ruc, fechaIni, fechaFin);
         return new ResponseEntity<>(retenciones, HttpStatus.OK);
+    }
+
+    @GetMapping(value="/empresas/{user}")
+    public ResponseEntity<List<Empresa>> getFactura(@PathVariable("user") String user ) {
+        List<Empresa> empresas = serviceUser.getEmpresas(user).getEmpresas();
+        return new ResponseEntity<>(empresas, HttpStatus.OK);
     }
 
 }
