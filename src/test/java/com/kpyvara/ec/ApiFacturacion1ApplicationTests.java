@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ApiFacturacion1ApplicationTests {
-	@Autowired
+	/*@Autowired
 	private BCryptPasswordEncoder bcrypt;
 	@Autowired
 	private IUsuarioRepo repo;
@@ -31,6 +31,6 @@ public class ApiFacturacion1ApplicationTests {
 		Usuario retorno = repo.save(us);
 
 		assertTrue(retorno.getPassword().equalsIgnoreCase(us.getPassword()));
-	}
+	}*/
 
 }

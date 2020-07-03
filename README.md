@@ -109,3 +109,15 @@ security.jwt.resource-ids=mitoresourceid
 	}
 ```
 
+7. Modelo de para crear un contador
+```
+{
+    "idUsuario": 25,
+    "username": "xavi@kpyvara.com",
+    "password": "123",
+    "enabled": true,
+    "empresas": [
+        { "ruc": "0300937034001"}
+    ]
+}
+```
