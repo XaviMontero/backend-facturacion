@@ -34,6 +34,14 @@ public class FacturaServiceImpl implements ICrud<Factura>{
 		return repo.getOne(axu).getDocumento();
 	}
 
+	public  int  deletFactura(String codigo){
+		try {
+			repo.deleteById(codigo);
+			return 1;
+		}catch (Exception psqlException) {
+			return 2;
+		}
+	}
 	@Override
 	public Factura getOneEmpresa(String id) {
 		// TODO Auto-generated method stub

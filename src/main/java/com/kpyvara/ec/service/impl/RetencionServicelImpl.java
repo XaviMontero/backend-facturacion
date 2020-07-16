@@ -108,6 +108,15 @@ public class RetencionServicelImpl implements ICrud<Retencion> {
 			 });
 			return datos;
 	   }
+
+		public  int  deletFactura(String codigo){
+		try {
+			repo.deleteById(codigo);
+			return 1;
+		}catch (Exception psqlException) {
+			return 2;
+		}
+		}
 	   
 	   public List<RetencionDTO> getEmpresasRucFecha(String cedula,String ruc,String fechaIni,String fechaFin){
 		     DateTimeFormatter formatterr = null;

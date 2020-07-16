@@ -10,12 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.kpyvara.ec.dto.FacturacionDTO;
@@ -32,6 +27,12 @@ public class FacturaController {
 	public ResponseEntity<List<FacturacionDTO>> getFactura(@PathVariable("cedula") String cedula ) {
 		List<FacturacionDTO> pacientes = service.getEmpresas(cedula);
 		return new ResponseEntity<>(pacientes, HttpStatus.OK);
+	}
+
+	@DeleteMapping(value="/{codigo}")
+	public ResponseEntity<Integer> deleteFactura(@PathVariable("codigo") String codigo ) {
+		Integer id = service.deletFactura(codigo);
+		return new ResponseEntity<>(id, HttpStatus.OK);
 	}
 	
 	@GetMapping(value="/{cedula}/{fechaIni}/{fechaFin}")

@@ -11,6 +11,10 @@ import com.kpyvara.ec.model.Factura;
 
 @Repository
 public interface IFactura extends JpaRepository<Factura, Integer> {
+
+	@Query(value = "DELETE FROM public.factura F WHERE F.codigo=?1", nativeQuery = true)
+	void deleteById(String codigo);
+
 	@Query(value = " SELECT F.id, F.sub_total, F.codigo, F.fecha, F.identificacion, F.total, A.ruc,A.nombre  ,F.iva ,F.sub_totaliva FROM public.factura F inner join public.empresa A on A.ruc = F.ruc where F.identificacion=?1", nativeQuery = true)
 	List<Object[]> listarResumen(String cedula);
 	
@@ -25,5 +29,6 @@ public interface IFactura extends JpaRepository<Factura, Integer> {
 
 	@Query(value = " SELECT F.id, F.sub_total, F.codigo, F.fecha, F.identificacion, F.total, A.ruc,A.nombre ,F.iva ,F.sub_totaliva FROM public.factura F inner join public.empresa A on A.ruc = F.ruc where  A.ruc=?1 and F.fecha BETWEEN ?2 AND ?3", nativeQuery = true)
 	List<Object[]> listarResumenRucContador(String ruc, LocalDate fechaIni, LocalDate fechaFin );
+
 
 }

@@ -12,6 +12,10 @@ import com.kpyvara.ec.model.Retencion;
  
 @Repository
 public interface IRetencion extends JpaRepository<Retencion, Integer> {
+
+	@Query(value = "DELETE FROM public.retencion F WHERE F.codigo=?1", nativeQuery = true)
+	void deleteById(String codigo);
+
 	@Query(value = " SELECT F.id, F.base_imponible, F.codigo, F.fecha, F.ruc_provedor, F.valor, A.ruc,A.nombre  FROM public.retencion F inner join public.empresa A on A.ruc = F.ruc where F.ruc_provedor=?1", nativeQuery = true)
 	List<Object[]> listarResumen(String cedula);
 	
