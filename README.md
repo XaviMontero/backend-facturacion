@@ -121,3 +121,4 @@ security.jwt.resource-ids=mitoresourceid
     ]
 }
 ```
+Ahora podras eliminar retenciones y facturas con  la clave de acceso que poseea el usuario fnal	
