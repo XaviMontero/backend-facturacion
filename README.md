@@ -121,4 +121,8 @@ security.jwt.resource-ids=mitoresourceid
     ]
 }
 ```
-Ahora podras eliminar retenciones y facturas con  la clave de acceso que poseea el usuario fnal	
+Ahora podras eliminar retenciones y facturas con  la clave de acceso que poseea el usuario final
+
+https://tu-api/facturas/{Clave de acceso}
+
+https://tu-api/facturas/{Clave de acceso
