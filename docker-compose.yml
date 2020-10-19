@@ -121,5 +121,6 @@ networks:
 volumes:
   certs:
   html:
-  vhostd: 
+  vhostd:
+  netdata-etc:
 
